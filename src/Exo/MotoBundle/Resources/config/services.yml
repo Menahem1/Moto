@@ -1,0 +1,7 @@
+parameters:
+#    exo_moto.example.class: Exo\MotoBundle\Example
+
+services:
+#    exo_moto.example:
+#        class: %exo_moto.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

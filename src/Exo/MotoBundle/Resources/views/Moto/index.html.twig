@@ -1,0 +1,41 @@
+{# src/Exo/MotoBundle/Resources/views/Inter/index.html.twig #}
+
+{% extends "ExoMotoBundle::layout.html.twig" %}
+
+{% block title %}Index - {{ parent() }}{% endblock %}
+
+{% block moto_body %}
+						<h2><a href="{{ path('moto_up_ad') }}">Ajouter une moto</a></h2>
+						<table border=1>
+						<tr>
+						<th>Nom de la moto</th>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Categorie</th>
+						<th>Piece(s)</th>
+						<th>Supprimer</th>
+		
+	
+				{% for moto in moto %}
+
+						<tr>
+						<td><a href="{{ path('moto_up_ad', {'id': moto.id}) }}">{{ moto.moto }}</a></td>
+						<td>{{ moto.nom }}</td>
+						<td>{{ moto.prenom }}</a></td>
+						<td>{{ moto.nomcategorie.nomcategorie }}</td>
+						<td>						
+								{% for piece in moto.piece %}
+									{{ piece.nompiece }}</p>
+								{% endfor %}
+						</td>
+						<td><a href="{{ path('moto_del', {'id': moto.id}) }}">Supprimer</a></td>
+						</tr>
+
+
+				{% else %}
+					<li>No Moto in database</li>
+				{% endfor %}
+				
+						</table>
+
+{% endblock %}		

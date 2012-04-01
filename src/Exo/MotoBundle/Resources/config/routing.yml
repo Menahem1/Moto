@@ -1,0 +1,14 @@
+# src/Exo/MotoBundle/Resources/config/routing.yml
+
+moto_accueil:
+    pattern:   /index
+    defaults:  { _controller: ExoMotoBundle:Moto:index }
+    
+moto_up_ad:
+    pattern:   /moto/{id}
+    defaults:  { _controller: ExoMotoBundle:Moto:ajouter, id: add }
+
+moto_del:
+    pattern:   /delete/{id}
+    defaults:  { _controller: ExoMotoBundle:Moto:delete }
+

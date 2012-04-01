@@ -1,0 +1,15 @@
+{# src/Exo/MotoBundle/Resources/views/Inter/add.html.twig #}
+
+{% extends "ExoMotoBundle::layout.html.twig" %}
+
+{% block title %}Add/Update - {{ parent() }}{% endblock %}
+
+{% block moto_body %}
+	
+	<h2>Ajouter ou modifier une moto</h2>
+	
+	{% include "ExoMotoBundle:Moto:form.html.twig" with {'form': form} %}
+	
+
+	
+{% endblock %}
